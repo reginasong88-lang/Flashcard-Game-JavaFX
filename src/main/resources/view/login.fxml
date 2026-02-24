@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.flashcard.controller.LoginController"
+      alignment="CENTER" spacing="20" stylesheets="@styles.css" prefWidth="800" prefHeight="600">
+      
+    <Label text="Flashcard Login" styleClass="label-title"/>
+    
+    <VBox maxWidth="300" spacing="10" alignment="CENTER" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 30; -fx-background-radius: 15;">
+        <TextField fx:id="usernameField" promptText="Username" />
+        <PasswordField fx:id="passwordField" promptText="Password" />
+        
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Login" onAction="#handleLogin" styleClass="button-success" prefWidth="100"/>
+            <Button text="Register" onAction="#handleRegister" styleClass="button-action" prefWidth="100"/>
+        </HBox>
+        
+        <Label fx:id="messageLabel" textFill="#fbbf24"/>
+    </VBox>
+</VBox>

@@ -1,0 +1,65 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460);
+    -fx-font-family: 'Arial';
+}
+
+.label-title {
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.label-text {
+    -fx-text-fill: white;
+}
+
+.card-container {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 20, 0, 0, 10);
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+/* 修改前：粉紅色 */
+/* 修改後：金色漸層 (Gold) */
+.card-front {
+    /* 使用亮金(#FFD700) 到 暗金(#DAA520) 的漸層 */
+    -fx-background-color: linear-gradient(to bottom right, #FFD700, #DAA520);
+    -fx-background-radius: 20;
+    -fx-padding: 30;
+    -fx-alignment: center;
+    /* 加一點陰影讓它更有金屬質感 */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+/* 修改前：深藍色 */
+/* 修改後：銀色漸層 (Silver) */
+.card-back {
+    /* 使用亮銀(#E0E0E0) 到 深灰銀(#7F8C8D) 的漸層 */
+    -fx-background-color: linear-gradient(to bottom right, #E0E0E0, #95a5a6);
+    -fx-background-radius: 20;
+    -fx-padding: 30;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+
+.button-action {
+    -fx-background-color: linear-gradient(to right, #533483, #6b4398);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.button-success {
+    -fx-background-color: linear-gradient(to right, #28a745, #34ce57);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.text-field {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}

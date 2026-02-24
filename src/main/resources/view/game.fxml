@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.flashcard.controller.GameController"
+           stylesheets="@styles.css" prefWidth="800" prefHeight="600">
+
+    <VBox alignment="CENTER" spacing="20" styleClass="root">
+        <Label text="法語問候語挑戰" styleClass="label-title"/>
+        <Label fx:id="progressLabel" text="Loading..." textFill="#fbbf24" style="-fx-font-size: 18px;"/>
+        
+        <StackPane fx:id="cardContainer" onMouseClicked="#handleFlip" prefWidth="400" prefHeight="300" maxWidth="400" maxHeight="300" styleClass="card-container">
+            <VBox fx:id="cardFace" styleClass="card-front" spacing="15" alignment="CENTER" prefWidth="400" prefHeight="300">
+                <Label fx:id="emojiLabel" style="-fx-font-size: 60px;"/>
+                
+                <Label fx:id="mainTextLabel" style="-fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <Label fx:id="hintLabel" style="-fx-text-fill: rgba(0,0,0,0.6);"/>
+                
+            </VBox>
+        </StackPane>
+        
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="btnPrev" text="← 上一張" onAction="#handlePrev" styleClass="button-action" prefHeight="40" prefWidth="120"/>
+            <Button text="✓ 記住了" onAction="#handleMarkKnown" styleClass="button-success" prefHeight="40" prefWidth="120"/>
+            <Button fx:id="btnNext" text="下一張 →" onAction="#handleNext" styleClass="button-action" prefHeight="40" prefWidth="120"/>
+        </HBox>
+        
+        <HBox spacing="30" alignment="CENTER">
+            <VBox alignment="CENTER" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 10; -fx-background-radius: 10; -fx-min-width: 100;">
+                <Label fx:id="knownCountLabel" text="0" textFill="#fbbf24" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+                <Label text="已記住" textFill="white"/>
+            </VBox>
+            <VBox alignment="CENTER" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 10; -fx-background-radius: 10; -fx-min-width: 100;">
+                <Label fx:id="remainingCountLabel" text="5" textFill="white" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+                <Label text="剩餘" textFill="white"/>
+            </VBox>
+        </HBox>
+        
+        <Button text="登出" onAction="#handleLogout" style="-fx-background-color: transparent; -fx-text-fill: gray; -fx-underline: true;"/>
+    </VBox>
+
+    <Pane fx:id="confettiLayer" mouseTransparent="true" prefWidth="800" prefHeight="600"/>
+    
+</StackPane>
