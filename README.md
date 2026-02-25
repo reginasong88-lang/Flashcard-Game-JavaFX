@@ -68,5 +68,6 @@ private static final String PASSWORD = "1234"; // 密碼
 ### 4. 啟動專案
 使用 Maven 執行：
 
-執行 Launcher.java (如果有建立) / App.java。
+執行 Launcher.java / App.java。
 右鍵專案 > Run As > Maven build... > javafx:run
+
